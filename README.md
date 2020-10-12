@@ -19,8 +19,14 @@ python3 instagramScraperCLI.py <list of profiles>
 
 ## Writing list of profiles
 * newline between account and another
-* Do not use the '@'example
-* Use the same names you use to search for an instagram account on their search bar
+* Use the same names you use to search for an instagram account on their search bar```
+## Changelog
+1.0.1 > Add the web-app.py to show images on a localhost website the html still under-development
+
+## TO-DO
+* Make it async instead of sync
+* Find a ay to make it download all the posts
+
 
 ## License
 [gpl-3.0](https://choosealicense.com/licenses/gpl-3.0/)
