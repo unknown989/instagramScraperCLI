@@ -45,8 +45,7 @@ with open(filename,"r") as f:
 list_ = list_.split("\n")
 list_ = list(set(list_))
 
-list_.sort()
-list_.pop(0)
+
 
 for index,i in enumerate(list_):
 	try:
