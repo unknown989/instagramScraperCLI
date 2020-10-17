@@ -25,7 +25,7 @@ python3 instagramScraperCLI.py <list of profiles>
 
 ## TO-DO
 * Make it async instead of sync
-* Find a ay to make it download all the posts
+* Find a to make it download all the posts
 
 
 ## License
