@@ -15,13 +15,14 @@ python3 instagramScraperCLI.py <list of profiles>
 ## Features
 * Uses instagram Search algorithm to search for accounts in the list
 * Super Fast
-* Easy UI (Don't have one :p)
+* Easy To Use
 
 ## Writing list of profiles
 * newline between accounts
-* Use the same names you use to search for an instagram account on the search bar```
+* Use the same names you use to search for an instagram account on the search bar``` (Recommended)
 ## Changelog
-1.0.1 > Add the web-app.py to show images on a localhost website the html still under-development
+1.0.1 > Added the web-app.py to show images on a localhost website the html still under-development
+1.0.2 > Added User-Agent Support
 
 ## TO-DO
 * Make it async
