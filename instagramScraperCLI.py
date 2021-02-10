@@ -1,4 +1,3 @@
-
 import requests
 from bs4 import BeautifulSoup as bs
 import json
@@ -8,9 +7,10 @@ import string
 import os
 
 def main(user):
-	r = requests.get("https://www.instagram.com/web/search/topsearch/?context=blended&query="+user).json()
+	headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0"}
+	r = requests.get("https://www.instagram.com/web/search/topsearch/?context=blended&query="+user,headers=headers).json()
 	user = r["users"][0]["user"]["username"]
-	r = requests.get("https://www.instagram.com/"+user)
+	r = requests.get("https://www.instagram.com/"+user,headers=headers)
 	sp = bs(r.text,"html.parser")
 	body = sp.find("body")
 	data = body.find("script",text=lambda t:t.startswith("window._sharedData"))
@@ -33,6 +33,7 @@ def main(user):
 
 	return images
 
+
 try:
 	filename = sys.argv[1]
 except:
@@ -43,8 +44,14 @@ with open(filename,"r") as f:
 	list_ = f.read()
 
 list_ = list_.split("\n")
+list_ = [i.lower() for i in list_]
 list_ = list(set(list_))
 
+try:
+	os.mkdir("./Accounts")
+	print("Accounts/ is created")
+except:
+	print("Accounts/ Already there")
 
 
 for index,i in enumerate(list_):
